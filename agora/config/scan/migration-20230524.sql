@@ -2,12 +2,20 @@
 alter table validator_balances_p
     add withdrawal bigint default 0 not null;
 
+alter table validator_balances_p
+    add total_balance bigint default 0 not null;
 
 alter table validator_balances_recent
     add withdrawal bigint default 0 not null;
 
+alter table validator_balances_recent
+    add total_balance bigint default 0 not null;
+
 create index idx_validator_balances_recent_withdrawal
     on validator_balances_recent (withdrawal);
+
+create index idx_validator_balances_recent_total_balance
+    on validator_balances_recent (total_balance);
 
 drop table if exists validator_withdrawal;
 create table validator_withdrawal
