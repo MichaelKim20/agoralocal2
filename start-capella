@@ -43,7 +43,7 @@ npm run deploy:commons_budeget
 npm run deploy:deposit
 npm run staking
 
-./agora/script.sh start-agora-scan
+# ./agora/script.sh start-agora-scan
 
 
 function change_step() {

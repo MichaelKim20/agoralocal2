@@ -58,9 +58,10 @@ indexer:
   indexMissingEpochsOnStartup: false # Check for missing epochs and export them after startup
   node:
     host: "host.docker.internal" # Address of the backend node
-    port: "4000" # GRPC port of the Prysm node
-    type: "prysm" # can be either prysm or lighthouse
-    pageSize: 250 # the amount of entries to fetch per paged rpc call, TODO set to 500
+    port: "3500"
+    grpcPort: "4000"
+    type: "prysm"
+    pageSize: 250
   eth1Endpoint: "/el/geth.ipc"
   eth1DepositContractAddress: "0x4Ca91738C7cD24895467c6d550D96BE8dC4b33AA"
   eth1DepositContractFirstBlock: 8
